@@ -47,3 +47,17 @@ img {
   display: block;
   margin-bottom: 1rem;
 }
+
+
+
+#mmpjjuggling-image {
+  display: block;       /* Macht das Bild zu einem Block-Element */
+  margin-left: auto;    /* Automatischer linker Außenabstand */
+  margin-right: auto;   /* Automatischer rechter Außenabstand */
+  position: fixed;      /* Damit es unten fixiert wird */
+  bottom: 10px;         /* 10 Pixel vom unteren Rand */
+  left: 50%;            /* Horizontal mittig ausrichten */
+  transform: translateX(-50%); /* Bild exakt zentrieren */
+  max-width: 90%;       /* Optional: Bildgröße anpassen */
+  height: auto;
+}
