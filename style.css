@@ -12,6 +12,8 @@ header {
   padding: 2rem;
   text-align: center;
   width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
 }
 
 /* Main container: sidebar + content */
@@ -19,28 +21,59 @@ header {
   display: flex;
   margin: 0;
   padding: 0;
+  min-height: 100vh; /* Höhe an Viewport anpassen */
+  box-sizing: border-box;
 }
 
-/* Sidebar (left, fixed on scroll) */
+/* Sidebar (links, sticky) */
 .sidebar {
   width: 25%;
   background-color: #f2f2f2;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   position: sticky;
   top: 0;
   height: 100vh;
   box-sizing: border-box;
   border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Main content area (right) */
+/* Navigation Menü in der Sidebar */
+.sidebar nav {
+  margin-top: 1rem;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #222;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a:focus {
+  background-color: #d0d0d0;
+  color: #000;
+}
+
+/* Abstand zwischen Info-Text und Links in Sidebar */
+.sidebar .info + nav {
+  margin-top: 2rem;
+}
+
+/* Main content area (rechts) */
 .content {
   width: 75%;
   padding: 2rem;
   box-sizing: border-box;
+  background-color: #fff;
+  overflow-wrap: break-word;
 }
 
-/* Images */
+/* Bilder: max 100%, Block-Element */
 img {
   max-width: 100%;
   height: auto;
@@ -48,16 +81,56 @@ img {
   margin-bottom: 1rem;
 }
 
-
-
+/* Main image unten mittig, fixiert */
 #mmpjjuggling-image {
-  display: block;       /* Macht das Bild zu einem Block-Element */
-  margin-left: auto;    /* Automatischer linker Außenabstand */
-  margin-right: auto;   /* Automatischer rechter Außenabstand */
-  position: fixed;      /* Damit es unten fixiert wird */
-  bottom: 10px;         /* 10 Pixel vom unteren Rand */
-  left: 50%;            /* Horizontal mittig ausrichten */
-  transform: translateX(-50%); /* Bild exakt zentrieren */
-  max-width: 90%;       /* Optional: Bildgröße anpassen */
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
   height: auto;
+  display: block;
+  z-index: 1000; /* Über allem */
+}
+
+/* Überschriften */
+h1, h2, h3 {
+  color: #222;
+  margin-top: 0;
+}
+
+/* Links generell */
+a {
+  color: #444;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Absätze */
+p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Für responsive Verhalten auf kleineren Bildschirmen */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar, .content {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  #mmpjjuggling-image {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 1rem auto 0;
+  }
 }
