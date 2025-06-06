@@ -99,16 +99,17 @@ h1, h2, h3 {
   margin-top: 0;
 }
 
-/* Links generell */
+/* Links generell - klassische blaue Farbe */
 a {
-  color: #444;
-  text-decoration: none;
+  color: #0000EE; /* klassisches Link-Blau */
+  text-decoration: underline; /* unterstrichen, damit sie klar erkennbar sind */
 }
 
 a:hover, a:focus {
-  color: #000;
+  color: #551A8B; /* dunkleres Blau beim Hover */
   text-decoration: underline;
 }
+
 
 /* Absätze */
 p {
