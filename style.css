@@ -68,7 +68,7 @@ header {
 .content {
   width: 75%;
   max-width: 700px;   /* maximale Breite für bessere Lesbarkeit */
-  margin: 0 auto;     /* zentriert den Inhalt horizontal */
+  margin: 0 20% 0 5%;     /* Inhalt weiter links als rechts */
   padding: 2rem;
   box-sizing: border-box;
   text-align: left;   /* linksbündig, aber insgesamt zentriert auf der Seite */
