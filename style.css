@@ -27,16 +27,17 @@ header {
 }
 
 .header-right a {
-  margin-left: 1.5rem;   /* Abstand zwischen Links */
-  font-size: 0.9rem;    /* Kleinere Schrift */
-  text-decoration: none;
-  color: #007bff;       /* Blaue Links, kannst du anpassen */
+  margin-left: 2rem;         /* Mehr Abstand zwischen den Links */
+  font-size: 1rem;           /* Angenehme, nicht zu kleine Schrift */
+  text-decoration: none;     /* Kein Unterstrich */
+  color: #000;               /* Schwarzer Text */
+  font-weight: 500;          /* Etwas kräftiger (optional) */
 }
 
 .header-right a:hover {
-  text-decoration: underline;
+  color: #666;               /* Grau beim Hover (optional) */
+  text-decoration: none;     /* Kein Unterstrich beim Hover */
 }
-
 
 /* Main container: sidebar + content */
 .container {
