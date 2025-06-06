@@ -67,10 +67,11 @@ header {
 /* Main content area (rechts) */
 .content {
   width: 75%;
+  max-width: 700px;   /* maximale Breite für bessere Lesbarkeit */
+  margin: 0 auto;     /* zentriert den Inhalt horizontal */
   padding: 2rem;
   box-sizing: border-box;
-  background-color: #fff;
-  overflow-wrap: break-word;
+  text-align: left;   /* linksbündig, aber insgesamt zentriert auf der Seite */
 }
 
 /* Bilder: max 100%, Block-Element */
