@@ -8,13 +8,35 @@ body {
 
 /* Header */
 header {
+  display: flex;
+  justify-content: space-between; /* Name links, Navigation rechts */
+  align-items: center;            /* Vertikal zentriert */
   background-color: #e0e0e0;
   padding: 2rem;
-  text-align: center;
   width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid #ccc;
+  /* text-align: center;  <-- wird nicht mehr gebraucht und entfernt */
 }
+
+.header-left h1 {
+  margin: 0;
+  font-size: 2rem;       /* Großer Name */
+  text-align: left;
+  color: #333;
+}
+
+.header-right a {
+  margin-left: 1.5rem;   /* Abstand zwischen Links */
+  font-size: 0.9rem;    /* Kleinere Schrift */
+  text-decoration: none;
+  color: #007bff;       /* Blaue Links, kannst du anpassen */
+}
+
+.header-right a:hover {
+  text-decoration: underline;
+}
+
 
 /* Main container: sidebar + content */
 .container {
