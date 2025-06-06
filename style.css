@@ -8,35 +8,47 @@ body {
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between; /* Name links, Navigation rechts */
-  align-items: center;            /* Vertikal zentriert */
   background-color: #e0e0e0;
   padding: 2rem;
   width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid #ccc;
-  /* text-align: center;  <-- wird nicht mehr gebraucht und entfernt */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Abstand zwischen Name und Navigation */
+  flex-wrap: wrap; /* Für kleinere Bildschirme */
 }
 
 .header-left h1 {
   margin: 0;
-  font-size: 2rem;       /* Großer Name */
+  font-size: 2rem;
   text-align: left;
   color: #333;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
 .header-right a {
-  margin-left: 2rem;         /* Mehr Abstand zwischen den Links */
-  font-size: 1rem;           /* Angenehme, nicht zu kleine Schrift */
-  text-decoration: none;     /* Kein Unterstrich */
-  color: #000;               /* Schwarzer Text */
-  font-weight: 500;          /* Etwas kräftiger (optional) */
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.header-right a:last-child {
+  margin-right: 0;
 }
 
 .header-right a:hover {
-  color: #666;               /* Grau beim Hover (optional) */
-  text-decoration: underline;     /* Kein Unterstrich beim Hover */
+  color: #666;
+  text-decoration: underline;
 }
 
 /* Main container: sidebar + content */
@@ -44,7 +56,7 @@ header {
   display: flex;
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* Höhe an Viewport anpassen */
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -90,11 +102,11 @@ header {
 /* Main content area (rechts) */
 .content {
   width: 75%;
-  max-width: 700px;   /* maximale Breite für bessere Lesbarkeit */
-  margin: 0 20% 0 5%;     /* Inhalt weiter links als rechts */
+  max-width: 700px;
+  margin: 0 20% 0 5%;
   padding: 2rem;
   box-sizing: border-box;
-  text-align: left;   /* linksbündig, aber insgesamt zentriert auf der Seite */
+  text-align: left;
 }
 
 /* Bilder: max 100%, Block-Element */
@@ -114,7 +126,7 @@ img {
   max-width: 90%;
   height: auto;
   display: block;
-  z-index: 1000; /* Über allem */
+  z-index: 1000;
 }
 
 /* Überschriften */
@@ -125,15 +137,14 @@ h1, h2, h3 {
 
 /* Links generell - klassische blaue Farbe */
 a {
-  color: #0000EE; /* klassisches Link-Blau */
-  text-decoration: underline; /* unterstrichen, damit sie klar erkennbar sind */
-}
-
-a:hover, a:focus {
-  color: #551A8B; /* dunkleres Blau beim Hover */
+  color: #0000EE;
   text-decoration: underline;
 }
 
+a:hover, a:focus {
+  color: #551A8B;
+  text-decoration: underline;
+}
 
 /* Absätze */
 p {
@@ -146,11 +157,13 @@ p {
   .container {
     flex-direction: column;
   }
+
   .sidebar, .content {
     width: 100%;
     height: auto;
     position: relative;
   }
+
   #mmpjjuggling-image {
     position: relative;
     bottom: auto;
@@ -158,11 +171,22 @@ p {
     transform: none;
     margin: 1rem auto 0;
   }
+
   .centered-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
-}
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
 }
