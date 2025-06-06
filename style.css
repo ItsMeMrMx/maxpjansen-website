@@ -36,7 +36,7 @@ header {
 
 .header-right a:hover {
   color: #666;               /* Grau beim Hover (optional) */
-  text-decoration: none;     /* Kein Unterstrich beim Hover */
+  text-decoration: underline;     /* Kein Unterstrich beim Hover */
 }
 
 /* Main container: sidebar + content */
